@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FCFEAB8B-FAFA-443C-940F-C9017476895E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{BDB8CAF0-6CCE-4D55-AFC3-714FA06C24EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LGcsharplib80", "src\LGcsharplib80\LGcsharplib80.csproj", "{BE7681C2-4B5D-4AE5-8D83-2FEB1729E5AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LGcsharplib80Test", "test\LGcsharplib80Test\LGcsharplib80Test.csproj", "{79B7B9FF-852E-4C16-B653-C189C38172BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE7681C2-4B5D-4AE5-8D83-2FEB1729E5AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE7681C2-4B5D-4AE5-8D83-2FEB1729E5AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE7681C2-4B5D-4AE5-8D83-2FEB1729E5AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE7681C2-4B5D-4AE5-8D83-2FEB1729E5AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79B7B9FF-852E-4C16-B653-C189C38172BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79B7B9FF-852E-4C16-B653-C189C38172BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79B7B9FF-852E-4C16-B653-C189C38172BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79B7B9FF-852E-4C16-B653-C189C38172BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BE7681C2-4B5D-4AE5-8D83-2FEB1729E5AF} = {FCFEAB8B-FAFA-443C-940F-C9017476895E}
+		{79B7B9FF-852E-4C16-B653-C189C38172BC} = {BDB8CAF0-6CCE-4D55-AFC3-714FA06C24EC}
+	EndGlobalSection
+EndGlobal

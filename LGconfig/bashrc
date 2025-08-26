@@ -1,0 +1,27 @@
+alias lt='ls -ltr'
+alias c='clear'
+alias dtestf='function _dtestf(){ dotnet test --logger "console;verbosity=detailed" --filter "FullyQualifiedName~$1"; }; _dtestf'
+alias vs='devenv.exe'
+alias vs.='devenv.exe *.sln'
+# 递归 dotnet build
+db() {
+    # 找出所有 .sln 或 .csproj 文件并逐个 build
+    find . -type f \( -name "*.sln" -o -name "*.csproj" \) | while read f; do
+        echo "=== Building $f ==="
+        dotnet build "$f"
+    done
+}
+# 递归 dotnet clear
+dc() {
+    find . -type f \( -name "*.sln" -o -name "*.csproj" \) | while read f; do
+        echo "=== Cleaning $f ==="
+        dotnet clean "$f"
+    done
+}
+# 递归 dotnet test
+dt() {
+    find . -type f \( -name "*.sln" -o -name "*.csproj" \) | while read f; do
+        echo "=== Testing $f ==="
+        dotnet test "$f" --logger "console;verbosity=detailed"
+    done
+}
