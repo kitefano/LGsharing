@@ -15,6 +15,7 @@ obj/
 ##*.user
 ##*.userosscache
 ##*.sln.docstates
+packages/
 
 # VS Code
 ##.vscode/
@@ -35,3 +36,8 @@ obj/
 ##*.bak
 ##*.log
 *.vs/
+
+# vim swap文件
+*.swp
+*.swo
+*.swn

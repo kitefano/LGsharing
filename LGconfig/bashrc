@@ -1,8 +1,13 @@
-alias lt='ls -ltr'
 alias c='clear'
+alias lt='ls -ltr'
+alias e='explorer'
+alias code='code'
+alias dtest='dotnet test --logger "console;verbosity=detailed"'
 alias dtestf='function _dtestf(){ dotnet test --logger "console;verbosity=detailed" --filter "FullyQualifiedName~$1"; }; _dtestf'
 alias vs='devenv.exe'
 alias vs.='devenv.exe *.sln'
+alias vsadmin='powershell.exe Start-Process devenv.exe -Verb RunAs'
+alias vsadmin.='powershell.exe Start-Process devenv.exe *.sln -Verb RunAs'
 # 递归 dotnet build
 db() {
     # 找出所有 .sln 或 .csproj 文件并逐个 build
