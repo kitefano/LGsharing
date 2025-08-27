@@ -13,7 +13,11 @@ namespace LGcsharplib80Test.LGcommons
         [TestMethod]
         public void GetCallerInfo_Helper()
         {
-            Console.WriteLine(LGcom.GetCallerInfo());
+            Console.WriteLine($"调用者文件名: {LGcom.GetCallerFileName()}");
+            Console.WriteLine($"调用者方法名: {LGcom.GetCallerMethodName()}");
+            Console.WriteLine($"调用者行号: {LGcom.GetCallerLineNumber()}");
+            Console.WriteLine($"调用者类名: {LGcom.GetCallerClassName()}");
+            Console.WriteLine($"综合输出-获取调用位置的信息: {LGcom.GetCallerInfo()}");
         }
 
         // 获取常用系统路径
