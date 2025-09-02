@@ -49,7 +49,8 @@ namespace LGcsharplib80.LGcommons
         {
             string fileName = GetCallerFileName(filePath);
             string className = GetCallerClassName();
-            return $"{className}.{memberName}() @ {fileName}[{lineNumber}]";
+            string stret = $"{className}.{memberName}() @ {fileName}[{lineNumber}]";
+            return stret;
         }
         #endregion
 
