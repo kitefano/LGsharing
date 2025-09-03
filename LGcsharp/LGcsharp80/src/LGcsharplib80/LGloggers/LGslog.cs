@@ -3,17 +3,17 @@ using LGcsharplib80.LGcommons;
 
 namespace LGcsharplib80.LGloggers
 {
-    public static class LGlog
+    public static class LGslog
     {
         private static ILGlogger _loggerKailog;
         private static ILGlogger _loggerSerilog;
         // 默认使用Serilog
-        static LGlog()
+        static LGslog()
         {
             _loggerKailog = new LGkailog();
             _loggerSerilog = new LGserilog();
         }
-        public static void Debug(string message, int logType = 0,
+        public static void Debug(string message, int logType = 1,
             [CallerFilePath] string filePath = "",
             [CallerMemberName] string memberName = "",
             [CallerLineNumber] int lineNumber = 0)
@@ -34,7 +34,7 @@ namespace LGcsharplib80.LGloggers
                     break;
             }
         }
-        public static void Info(string message, int logType = 0,
+        public static void Info(string message, int logType = 1,
             [CallerFilePath] string filePath = "",
             [CallerMemberName] string memberName = "",
             [CallerLineNumber] int lineNumber = 0)
@@ -55,7 +55,7 @@ namespace LGcsharplib80.LGloggers
                     break;
             }
         }
-        public static void Warn(string message, int logType = 0,
+        public static void Warn(string message, int logType = 1,
             [CallerFilePath] string filePath = "",
             [CallerMemberName] string memberName = "",
             [CallerLineNumber] int lineNumber = 0)
@@ -76,7 +76,7 @@ namespace LGcsharplib80.LGloggers
                     break;
             }
         }
-        public static void Error(string message, Exception? ex = null, int logType = 0,
+        public static void Error(string message, Exception? ex = null, int logType = 1,
             [CallerFilePath] string filePath = "",
             [CallerMemberName] string memberName = "",
             [CallerLineNumber] int lineNumber = 0)
@@ -97,7 +97,7 @@ namespace LGcsharplib80.LGloggers
                     break;
             }
         }
-        public static void Fatal(string message, Exception? ex = null, int logType = 0,
+        public static void Fatal(string message, Exception? ex = null, int logType = 1,
             [CallerFilePath] string filePath = "",
             [CallerMemberName] string memberName = "",
             [CallerLineNumber] int lineNumber = 0)

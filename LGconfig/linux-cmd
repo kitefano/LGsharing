@@ -1,0 +1,21 @@
+# 通用命令
+查看cpu信息：lscpu
+
+## seq日志
+安装运行：
+```shell
+# 拉取 Seq 官方镜像
+docker pull datalust/seq
+# 创建并运行容器
+docker run -d --name seq \
+  -e ACCEPT_EULA=Y \
+  -p 5341:5341 \
+  -p 8080:80 \
+  datalust/seq
+# 删除已存在的seq容器
+docker rm seq
+```
+-e ACCEPT_EULA=Y：接受 Seq 的许可协议
+-p 5341:5341：日志 API 接口
+-p 80:80：Web 管理界面
+运行后，你可以在浏览器访问 http://<服务器公网IP>/ 进入 Seq 管理界面。

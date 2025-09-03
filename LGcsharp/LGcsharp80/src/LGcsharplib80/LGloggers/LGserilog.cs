@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Dynamic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using LGcsharplib80.LGcommons;
-using Serilog;
+﻿using Serilog;
 using Serilog.Events;
 
 namespace LGcsharplib80.LGloggers
@@ -28,6 +20,7 @@ namespace LGcsharplib80.LGloggers
                     retainedFileCountLimit: 7,
                     outputTemplate: "[{Timestamp:yyyy-MM-dd HH:mm:ss.ffff} {Level:u3}] {Message:lj}{NewLine}{Exception}"
                 )
+                .WriteTo.Seq("http://116.62.145.219:5341") // 如果没有运行Seq，可以注释掉这一行
                 .CreateLogger();
             AppDomain.CurrentDomain.ProcessExit += (_, __) => Log.CloseAndFlush();
         }
