@@ -1,24 +1,24 @@
 # Build results
-bin/
-obj/
-##[Bb]uild/
-##[Ll]og/
-##[Dd]ebug/
-##[Rr]elease/
-##x64/
-##x86/
-##[Aa][Rr][Mm]/
-##[Aa][Rr][Mm]64/
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
 
 # Visual Studio files
 ##*.suo
 ##*.user
 ##*.userosscache
 ##*.sln.docstates
-packages/
+packages/*
 
 # VS Code
-##.vscode/
+.vscode/*
 
 # Resharper
 ##_ReSharper*/
@@ -35,7 +35,7 @@ packages/
 ##*.dbmdl
 ##*.bak
 ##*.log
-*.vs/
+*.vs/*
 
 # vim swap文件
 *.swp
