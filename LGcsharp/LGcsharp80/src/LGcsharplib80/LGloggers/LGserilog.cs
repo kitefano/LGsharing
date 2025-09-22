@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
-using Serilog;
+﻿using Serilog;
 using Serilog.Events;
 
 namespace LGcsharplib80.LGloggers
@@ -10,9 +9,6 @@ namespace LGcsharplib80.LGloggers
         public LGserilog(string logDir = "logs", string sequrl = "http://116.62.145.219:5341")
         {
             string logFilePath = Path.Combine(logDir, ".log");
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json");
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Debug()
                 .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)

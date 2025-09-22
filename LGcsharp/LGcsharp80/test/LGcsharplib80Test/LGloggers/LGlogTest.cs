@@ -1,5 +1,4 @@
-﻿using System.Reflection;
-using LGcsharplib80.LGcommons;
+﻿using LGcsharplib80.LGcommons;
 using LGcsharplib80.LGloggers;
 
 namespace LGcsharplib80Test.LGloggers
@@ -36,7 +35,7 @@ namespace LGcsharplib80Test.LGloggers
         public void LGlog_UseHelper_Serilog2()
         {
             string methodName = LGcom.GetCallerMethodName();
-            // 第二种方式：使用 Serilog (建议使用这一种)  
+            // 第二种方式：使用 Serilog (推荐)  
             LGslog.Debug($"{methodName}, This is a debug message.");
             LGslog.Info($"{methodName}, This is an info message.");
             LGslog.Warn($"{methodName}, This is a warning message.");

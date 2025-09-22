@@ -7,12 +7,14 @@ namespace LGcsharplib80.LGloggers
     {
         private static ILGlogger _loggerKailog;
         private static ILGlogger _loggerSerilog;
-        // 默认使用Serilog
+        // 默认使用 kailog
         static LGlog()
         {
             _loggerKailog = new LGkailog();
             _loggerSerilog = new LGserilog();
         }
+
+        // logLib: 0-Kailog, 1-Serilog 
         public static void Debug(string message, int logType = 0,
             [CallerFilePath] string filePath = "",
             [CallerMemberName] string memberName = "",
