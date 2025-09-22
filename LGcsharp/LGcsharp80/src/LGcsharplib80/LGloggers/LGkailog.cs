@@ -4,7 +4,7 @@
     {
         private readonly string _logDir;
         private readonly object _lockObj = new object();
-        public LGkailog(string logDir = "logs")
+        public LGkailog(string logDir = "logs", string sequrl = "http://116.62.145.219:5341")
         {
             _logDir = logDir;
             if (!Directory.Exists(_logDir))

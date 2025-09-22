@@ -7,11 +7,19 @@ namespace LGcsharplib80.LGloggers
     {
         private static ILGlogger _loggerKailog;
         private static ILGlogger _loggerSerilog;
+        private static bool _initialized = false;
         // 默认使用Serilog
         static LGslog()
         {
             _loggerKailog = new LGkailog();
             _loggerSerilog = new LGserilog();
+        }
+        public static void Init(string logDir = "logs", string sequrl = "http://116.62.145.219:5341")
+        {
+            if(_initialized) return; // 防止重复初始化
+            _loggerKailog = new LGkailog(logDir, sequrl);
+            _loggerSerilog = new LGserilog(logDir, sequrl);
+            _initialized = true;
         }
         public static void Debug(string message, int logType = 1,
             [CallerFilePath] string filePath = "",

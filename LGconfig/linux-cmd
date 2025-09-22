@@ -1,21 +1,54 @@
 # 通用命令
 查看cpu信息：lscpu
-
+查看Linux系统信息： lsb_release -a 
 ## seq日志
-安装运行：
+### 安装运行：
 ```shell
 # 拉取 Seq 官方镜像
 docker pull datalust/seq
 # 创建并运行容器
 docker run -d --name seq \
   -e ACCEPT_EULA=Y \
-  -p 5341:5341 \
+  -e SEQ_FIRSTRUN_ADMINPASSWORD=kai@_123123 \
   -p 8080:80 \
+  -p 5341:5341 \
   datalust/seq
-# 删除已存在的seq容器
-docker rm seq
-```
 -e ACCEPT_EULA=Y：接受 Seq 的许可协议
 -p 5341:5341：日志 API 接口
 -p 80:80：Web 管理界面
-运行后，你可以在浏览器访问 http://<服务器公网IP>/ 进入 Seq 管理界面。
+运行后，你可以在浏览器访问 http://116.62.145.219:8080  进入 Seq 管理界面。  
+# 运行后默认用户名密码：admin/kai@_123123, 进去后需要修改密码：xsca@123  
+# 命令行查看（体验不好）： P2DQ5UPE3MlaZAd55zpZ  
+curl -H "X-Seq-ApiKey: YOUR_API_KEY" "http://116.62.145.219:8080/api/events?count=10"  
+# 删除已存在的seq容器  
+docker rm seq
+docker rm -f seq
+# 停止
+docker stop seq
+# 启动：
+docker start seq
+# 重启：
+docker restart seq
+# 查看实时日志（按 Ctrl+C 退出）
+docker logs -f seq
+# 查看最近 N 行日志（如最近 100 行）
+docker logs --tail 100 seq
+# 查看指定时间范围内的日志（如过去 1 小时）
+docker logs --since 1h seq 
+```
+
+
+## docker
+```shell
+# 确认是否安装docker
+docker --version
+# 查看服务运行状态  
+sudo systemctl status docker
+# 启动
+sudo systemctl start docker
+sudo systemctl enable docker   # 开机自启（可选）  
+# 查看docker中所有运行的镜像 
+docker ps -a  
+```
+
+
