@@ -104,3 +104,7 @@ log.txt
 *.swp
 *.swo
 *.swn
+
+# 仓颉
+.arts/
+.cache/

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LGcsharplib80Test", "test\L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsoleApp1", "test\TestConsoleApp1\TestConsoleApp1.csproj", "{4A536DCA-7F5B-4380-9A3F-853C87591B7A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "test\TestProject1\TestProject1.csproj", "{C81EEF19-D233-4274-A3F5-F2A7A322A948}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{4A536DCA-7F5B-4380-9A3F-853C87591B7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A536DCA-7F5B-4380-9A3F-853C87591B7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A536DCA-7F5B-4380-9A3F-853C87591B7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C81EEF19-D233-4274-A3F5-F2A7A322A948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C81EEF19-D233-4274-A3F5-F2A7A322A948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C81EEF19-D233-4274-A3F5-F2A7A322A948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C81EEF19-D233-4274-A3F5-F2A7A322A948}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,5 +45,9 @@ Global
 		{BE7681C2-4B5D-4AE5-8D83-2FEB1729E5AF} = {FCFEAB8B-FAFA-443C-940F-C9017476895E}
 		{79B7B9FF-852E-4C16-B653-C189C38172BC} = {BDB8CAF0-6CCE-4D55-AFC3-714FA06C24EC}
 		{4A536DCA-7F5B-4380-9A3F-853C87591B7A} = {BDB8CAF0-6CCE-4D55-AFC3-714FA06C24EC}
+		{C81EEF19-D233-4274-A3F5-F2A7A322A948} = {BDB8CAF0-6CCE-4D55-AFC3-714FA06C24EC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D2455FC-9D3A-4434-9AE1-7B1504859654}
 	EndGlobalSection
 EndGlobal
